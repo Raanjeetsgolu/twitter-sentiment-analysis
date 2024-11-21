@@ -1,29 +1,9 @@
-# import streamlit as st
-# import pickle
-# import time
-
-# st.title("Twitter Sentiment Analysis")
-
-# model = pickle.load(open('twitter_sentiment.pkl', 'rb'))
-
-# tweet = st.text_input("Enter your tweet")
-
-# submit = st.button('predict')
-
-# if submit:
-#     start = time.time()
-#     prediction = model.predict(tweet)
-#     end =  time.time()
-#     st.write("Prediction time taken: ", round(end-start,2),'second')
-#     print(prediction[0])
-#     st.write("predicted sentiment is ", prediction[0])
-
 import streamlit as st
-import pickle
+import joblib
 import time
 
 # load the model
-model = pickle.load(open('twitter_sentiment.pkl', 'rb'))
+model = joblib.load('twitter_sentiment_analysis.pkl')
 
 st.title('Twitter Sentiment Analysis')
 
@@ -36,6 +16,5 @@ if submit:
     prediction = model.predict([tweet])
     end = time.time()
     st.write('Prediction time taken: ', round(end-start, 2), 'seconds')
-    
     print(prediction[0])
     st.write('sentiment predicted:   ', prediction[0])
