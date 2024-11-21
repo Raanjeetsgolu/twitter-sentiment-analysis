@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project performs **Tweet Sentiment Analysis** using machine learning algorithms. The app provides sentiment analysis on tweets in real-time, powered by Streamlit for a simple and interactive web interface. The model is trained using pre-processed data, and predictions are displayed directly through the app.
+This project performs **Tweet Sentiment Analysis** using multiple machine learning algorithms and choosing the best among those. The app provides sentiment analysis on tweets in real-time, powered by Streamlit for a simple and interactive web interface. The model is trained using pre-processed data, and predictions are displayed directly through the app.
 
 ## Features
 
@@ -67,6 +67,7 @@ docker run -p 8501:8501
 + Scikit-Learn (for model building)
 + matplotlib, seaborn (for data visualization)
 + Docker (for containerization)
++ joblib (for dumping and loading the model)
 
 
 ## Contributing
