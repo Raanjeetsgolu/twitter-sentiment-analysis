@@ -54,7 +54,7 @@ docker build -t twitter-sentiment-analysis .
   ```
 2.***Run the Docker container***:
    ```bash
-docker run -p 8501:8501 
+docker run -td -p 8501:8501 --name twitter-sentiment-analysis  twitter-sentiment-analysis
    ```
 3.***Access the application***:
  Open your browser and navigate to http://127.0.0.1:8501
